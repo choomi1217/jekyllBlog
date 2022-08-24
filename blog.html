@@ -1,0 +1,22 @@
+---
+layout: default
+title: Blog
+---
+
+<h1> Latest Posts </h1>
+
+<ul>
+    {% for post in site.posts %}
+        <li>
+            <h2> <a href="{{ post.url }}"> {{ post.title }} </a> </h2>
+            <p> {{ post.excerpt }} </p>
+        </li>
+    {% endfor %}
+</ul>
+
+<!--
+
+post.urlJekyll에 의해 자동으로 게시물의 출력 경로로 설정됩니다.
+post.excerpt기본적으로 콘텐츠의 첫 번째 단락입니다.
+
+-->
